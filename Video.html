@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title> Pictures </title>
+
+    <style>
+       
+    .Video{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr 1fr));
+        gap: 10rem;
+        margin-top: 10rem;
+        text-emphasis-color: red;
+    }
+    .Video video{
+        width: 50%;
+        height: 50%;
+        object-fit: cover;
+        position: center;
+        border-radius: 1rem;
+        box-shadow: 0 0 25px red;
+        transition: 0.3s ease;
+        margin-top: 5rem;
+        margin-left: 50rem;
+    }
+
+    p{
+        margin-left: 50rem;
+        font-size: 2rem;
+        color: white;
+        width: 50%;
+
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">My Library</a>
+
+        <nav>
+            <a href="index.html" class="active"> Home</a>
+            <a href="images.html" link="Picture" >College Day</a>
+            <a href="Video.html" >Video</a>
+        </nav>
+    </header>
+    <div class="Video">
+        <div>
+            <div>
+                <p>Mi tan aw pagka gabie na event para sa attendance</p>
+            <div>
+                <video width="320" height="240" controls>
+                    <p>ACT1</p>
+                    <source src="ACT1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <br>
+        <div>
+            <video width="320" height="240" controls>
+            <source src="ACT1.mp4" type="video/mp4">
+            </video> 
+        </div>
+    </div>
+</body>
+
+</html>

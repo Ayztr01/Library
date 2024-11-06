@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
+    
+    
+    <style>
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 10rem;
+    }
+
+    .gallery-item {
+        position: relative; 
+    }
+
+    .gallery img {
+        border-radius: 1rem;
+        box-shadow: 0 0 25px red;
+        transition: 0.3s ease;
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover;
+    }
+
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+
+    .overlay {
+        position: absolute; 
+        padding: 2px;
+        margin: 3px;
+        top: 50%; 
+        left: 50%; 
+        transform: translate(-50%, -50%); 
+        color: black; 
+        font-size: 1.5rem; 
+        background-color: white;
+        padding: 0.5rem; 
+        border-radius: 0.5rem;
+        opacity: 0; 
+        transition: opacity 0.3s ease; 
+    }
+
+    .gallery-item:hover .overlay {
+        opacity: 2; 
+    }
+
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgba(0, 0, 0, 0.8); 
+    }
+
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">My Library</a>
+
+        <nav>
+            <a href="index.html" class="active"> Home</a>
+            <a href="images.html" >College Day</a>
+            <a href="Video.html" >Video</a>
+        </nav>
+    </header>
+
+    <section >
+        <div class="gallery">
+            <!-- Picture 1 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 1.')">
+                <img src="Pic1.jpg" alt="Description of Picture 1">
+                <span class="overlay">Mr. Rodrigo A. Abellanosa bring a hype band for all student in Asian College of Technology</span>
+            </div>
+            <!-- Picture 2 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 2.')">
+                <img src="Pic11.jpg" alt="Description of Picture 2">
+                <span class="overlay">His one of the Photographer of Act and have a facebook page Heze SHOT they uploaded all the pictures </span>
+            </div>
+            <!-- Picture 3 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 3.')">
+                <img src="Pic10.jpg" alt="Description of Picture 3">
+                <span class="overlay">Sir Manal show his talent of singing it was outstanding performance</span>
+            </div>
+            <!-- Picture 4 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 4.')">
+                <img src="Pic4.jpg" alt="Description of Picture 4">
+                <span class="overlay">Skibi pap pap</span>
+            </div>
+            <!-- Picture 5 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 5.')">
+                <img src="Pic5.jpg" alt="Description of Picture 5">
+                <span class="overlay">After the event we rush to the front stage to take a photo of our instructor Ms. Aira Alde</span>
+            </div>
+            <!-- Picture 6 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 6.')">
+                <img src="Pic6.jpg" alt="Description of Picture 6">
+                <span class="overlay">My Kauban at that time</span>
+            </div>
+            <!-- Picture 7 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 7.')">
+                <img src="Pic7.jpg" alt="Description of Picture 7">
+                <span class="overlay">Groupiee with my friends </span>
+            </div>
+            <!-- Picture 8 -->
+            <div class="gallery-item" onclick="openModal('This is a description for Picture 8.')">
+                <img src="Pic8.jpg" alt="Description of Picture 8">
+                <span class="overlay">We watch together of the event her name is Charisse Mae Isabelo Seloterio and my co-member of La Paroza</span>
+            </div>
+        </div>
+        
+        <!-- Modal Structure -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <p id="modal-description"></p>
+            </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>
